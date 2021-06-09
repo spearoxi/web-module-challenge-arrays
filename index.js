@@ -50,7 +50,7 @@ function copy(array){
     return newArr;
 }    
 
-console.log('Task 1', copy(originalFlavors));
+/*console.log('Task 1', copy(originalFlavors));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -70,7 +70,7 @@ function is31Flavors(array){
     }
 }
 
-console.log('Task 2', is31Flavors(originalFlavors));
+/*console.log('Task 2', is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -90,7 +90,7 @@ function addFlavor(array, string){
    return array;
 }
 
-console.log('Task 3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
+/*console.log('Task 3', addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -109,7 +109,7 @@ function removeLastFlavor(array){
    return array;
 }
 
-console.log('task 4', removeLastFlavor(originalFlavors));
+/*console.log('task 4', removeLastFlavor(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -124,8 +124,10 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, index){
-    /*your code here*/
+    return array[index];
 }
+
+/*console.log('Task 5', getFlavorByIndex(originalFlavors, 2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -143,10 +145,16 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array, string){
+    for(let i = 0; i < array.length; i++){
+        if(array[i].includes(string)){
+            array.splice(i, 1);
+        }
+    }
+    return array;
 }
 
+console.log("Task 6", removeFlavorByName(originalFlavors,"Vanilla"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -179,7 +187,7 @@ function filterByWord(array, string){
     }
     return filteredFlavors;
 }
-console.log('Task 7 ', filterByWord(originalFlavors, "Chocolate"));
+/*console.log('Task 7 ', filterByWord(originalFlavors, "Chocolate"));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
